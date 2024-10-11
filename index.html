@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind and Daisy UI CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- google font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <!-- css link -->
+  <link rel="stylesheet" href="./style.css">
+
+
+
+  <title>Pets House</title>
+</head>
+
+<body class="font-[lato]">
+  <header>
+    <!-- navbar -->
+    <div id="nav-container" class="w-11/12 mx-auto">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+
+          <div class="logo flex items-center gap-1"><img class="w-6" src="images/logo.webp" alt=""><span
+              class="font-bold">Peddy</span>
+          </div>
+        </div>
+
+        <ul class=" flex text-gray-500 items-center justify-center gap-5 font-semibold ml-4">
+          <li>Home</li>
+          <li>Shope</li>
+          <li>Contact</li>
+        </ul>
+
+        <div class="navbar-end">
+          <img class="w-10" src="https://img.icons8.com/material-outlined/48/user-male-circle.png" alt="">
+        </div>
+      </div>
+
+    </div>
+    <p class="text-center font-bold text-gray-400  my-5  ">Bringing Families Together ❤️‍🔥
+    </p>
+    <h1 class="text-5xl text-center font-extrabold my-2 leading-normal">Your Path to Adoption <br>Starts Here</h1>
+    <p class="text-center w-11/12 lg:w-3/6 mx-auto">It is a long established fact that a reader will be distracted by
+      the readable content of a page when looking at its
+      layout. The point of using Lorem Ipsum is that it has a.</p>
+    <div class="text-center"><a href="#pets-container"><button id="main_content"
+          class="btn bg-green-800 px-7 text-white mt-3">view more</button></a>
+    </div>
+
+    <!-- banner -->
+    <div class="lg:w-7/12 mx-auto"><img class="w-full" src="images/pet.webp" alt=""></div>
+  </header>
+
+  <main>
+    <section>
+      <h2 class="font-bold text-center my-5 text-3xl lg:text-4xl">Adopt Your Best Friend</h2>
+      <p class="text-center w-11/12 lg:w-6/12 mx-auto my-5">It is a long established fact that a reader will be
+        distracted
+        by the
+        readable content of a page when looking at its
+        layout. The point of using Lorem Ipsum is that it has a.</p>
+
+    </section>
+
+
+    <!--  sorting-->
+    <div class="flex items-center justify-between w-11/12 mx-auto">
+      <h2 class="my-3 font-bold text-2xl">Best Deal For You</h2>
+      <button id="sort_btn" class="btn bg-[#0E7A81] text-white ">Sort By Price</button>
+
+    </div>
+    <!-- sorting end -->
+    <div id="button-container" class="w-11/12 mx-auto flex justify-between items-center my-5">
+
+    </div>
+    <!-- spinner -->
+
+    <div id="spinner" class="flex items-center justify-center">
+
+    </div>
+    <div class="w-11/12 mx-auto lg:flex lg:flex-row flex-col my-5">
+
+      <div id="pets-container" class="lg:w-8/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-3 ">
+
+      </div>
+      <div id="likedPets" class="border w-full lg:w-2/5 rounded-lg grid grid-cols-2 gap-2 h-fit p-5 m-2 ">
+
+      </div>
+    </div>
+
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button id="modalBtn" class="btn hidden" onclick="customModal.showModal()">open modal</button>
+    <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="modal_Content">
+
+        </div>
+
+        <div class="">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <div class="flex items-center justify-center mt-2"><button
+                class=" btn w-full bg-[#0E7A811A] border-2 border-[#0E7A8133] text-[#0E7A81] ">Close</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+
+    <!-- countdown modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <button id="countdown_btn" class="btn hidden" onclick="countdownModal.showModal()">open modal</button>
+    <dialog id="countdownModal" class="modal">
+      <div class="modal-box">
+        <div id="countdown_content" class="">
+          <div class="w-28 mx-auto"><img class="w-full"
+              src="https://img.icons8.com/?size=96&id=q6BlPrJZmxHV&format=png" /></div>
+          <h3 class="text-center font-bold text-3xl my-2">Congrats</h3>
+          <p class="text-center text-lg font-semibold my-2">Adoption process is start for your Pets</p>
+          <!-- const countdownElement = document.getElementById('countdown'); -->
+          <div id="countdown">
+
+          </div>
+
+        </div>
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button id="countdown_close">close</button>
+      </form>
+    </dialog>
+    <!-- countdown modal end -->
+  </main>
+
+
+
+  <footer class=" bg-[#131313] text-white p-10">
+    <div class="footer flex-col lg:flex-row flex justify-between items-center w-11/12 mx-auto">
+      <nav>
+        <div class="flex items-center gap-2 "><img class="w-7" src="images/logo.webp" alt=""> <span
+            class="font-semibold ">Paddy</span></div>
+        <span class="leading-normal">Location: av. Washington 165,<br> NY CA 54003
+          Phone: +31 85 964 47 25 <br>
+          Email: info@yourdomain.com <br>
+          Openings hours: 9.00 AM - 5.00 PM</span>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Useful link</h6>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">
+          About Us
+        </a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Animals</a>
+        <a class="link link-hover">Foundation</a>
+      </nav>
+
+      <form>
+        <h6 class="footer-title">Drop a massage</h6>
+        <fieldset class="form-control w-80">
+          <label class="label">
+            <span class="label-text text-white">Enter your email address</span>
+          </label>
+          <div class="join text-black flex flex-col gap-3">
+            <input type="text" placeholder="username@site.com" class="input input-bordered" />
+            <button class="btn btn-primary ">Subscribe</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </footer>
+
+  <!-- script -->
+  <script src="pets.js"></script>
+</body>
+
+</html>
