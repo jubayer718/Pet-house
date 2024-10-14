@@ -261,32 +261,52 @@ const displayDetails = (details) => {
     
 
     <div class="grid grid-cols-2 ">
+    ${details.breed===null||details.breed===undefined||details.breed===""?` <div class="flex items-center font-semibold gap-2"><span class="w-4 h-4"><img class="w-full object-cover" src="https://img.icons8.com/?size=48&id=jQkL4uOqbTW7&format=png"/></span> <p>Breed: Not Found</p></div> `:`<div class="flex items-center font-semibold gap-2"><span class="w-4 h-4"><img class="w-full object-cover" src="https://img.icons8.com/?size=48&id=jQkL4uOqbTW7&format=png"/></span> <p>Breed:${details.breed}</p></div>`}
     
-    <div class="flex items-center font-semibold gap-2"><span class="w-4 h-4"><img class="w-full object-cover" src="https://img.icons8.com/?size=48&id=jQkL4uOqbTW7&format=png"/></span> <p>Breed:${details.breed}</p></div>
+    
 
 
-    <div class="flex items-center font-semibold gap-2">
+${details.date_of_birth===null||details.date_of_birth===undefined||details.date_of_birth===""?`    <div class="flex items-center font-semibold gap-2">
+   <span class="w-4 h-4"><img class="w-full object-cover" src="https://img.icons8.com/?size=48&id=vwGXRtPWrZSn&format=png"/></span>
+     <p>Birth: Not Found</p>
+ </div>`:`    <div class="flex items-center font-semibold gap-2">
    <span class="w-4 h-4"><img class="w-full object-cover" src="https://img.icons8.com/?size=48&id=vwGXRtPWrZSn&format=png"/></span>
      <p>Birth: ${details.date_of_birth} </p>
- </div>
+ </div>`}
 
+${details.gender===undefined||details.gender===null||details.gender===""?`<div class="flex items-center font-semibold gap-2">
+    <span class="w-4 h-4"><img class="w-full object-cover" src="https://img.icons8.com/?size=64&id=16271&format=png"/></span>
+      <p>Gender: Not Found </p>
 
- <div class="flex items-center font-semibold gap-2">
+    </div>`:`<div class="flex items-center font-semibold gap-2">
     <span class="w-4 h-4"><img class="w-full object-cover" src="https://img.icons8.com/?size=64&id=16271&format=png"/></span>
       <p>Gender: ${details.gender} </p>
 
-    </div>
- <div class="flex items-center font-semibold gap-2">
+    </div>`}
+ 
+
+    ${details.vaccinated_status===undefined||details.vaccinated_status===null||details.vaccinated_status===""?`<div class="flex items-center font-semibold gap-2">
     <span class="w-4 h-4"><img class="w-full object-cover" src="https://img.icons8.com/?size=64&id=16271&format=png"/></span>
-      <p>Gender: ${details.vaccinated_status} </p>
+      <p>vaccination: Not Found </p>
 
-    </div>
+    </div>`:`<div class="flex items-center font-semibold gap-2">
+    <span class="w-4 h-4"><img class="w-full object-cover" src="https://img.icons8.com/?size=64&id=16271&format=png"/></span>
+      <p>vaccination: ${details.vaccinated_status} </p>
 
-     <div class="flex items-center font-semibold gap-2">
+    </div>`}
+ 
+
+    ${details.price===undefined||details.price===null||details.price===""?`   <div class="flex items-center font-semibold gap-2">
+    <span class="w-4 h-4"><img class="w-full object-cover" src="https://img.icons8.com/?size=48&id=89392&format=png"/></span>
+      <p>Price: Not Found </p>
+
+    </div>`:`   <div class="flex items-center font-semibold gap-2">
     <span class="w-4 h-4"><img class="w-full object-cover" src="https://img.icons8.com/?size=48&id=89392&format=png"/></span>
       <p>Price: ${details.price}$ </p>
 
-    </div>
+    </div>`}
+
+  
     
     </div>
   
